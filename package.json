@@ -1,10 +1,11 @@
 {
-  "name": "catchy",
+  "name": "akar",
   "version": "1.0.0",
   "description": "server node js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "kuroishi",
   "license": "MIT",
@@ -20,5 +21,13 @@
   "keywords": [
     "generator",
     "HTML"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhonisaputra/Akar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dhonisaputra/Akar/issues"
+  },
+  "homepage": "https://github.com/Dhonisaputra/Akar#readme"
 }
