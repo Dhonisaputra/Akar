@@ -14,15 +14,16 @@ global.app.get('*', function(req, res){
 	event = event.split('/');
 	event = event.filter(function(res){return res != ''})
 	event = event.join('/');
-
 	RTR.set_routing(event)
     // console.log(RTR_data)
     
     
-    var CTR = global.load_class(RTR._classname, global.APPLICATION_PATH('controllers'));
-    // var CTR = global.load_controller(RTS.file)
-    if(typeof CTR[RTR._functionname] == 'function')
+    var CTR = global.load_class(RTR.class, global.APPLICATION_PATH('controllers'));
+    // console.log(RTR._functionname, RTR._classname)
+
+    // var CTR = global.load_controller(RTR.class)
+    if(typeof CTR[RTR.function] == 'function')
     {
-        CTR[RTR._functionname](event, req, res, RTR._routing_params)
+        CTR[RTR.function](event, req, res, RTR._routing_params)
     }
 })

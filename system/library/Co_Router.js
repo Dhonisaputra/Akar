@@ -2,7 +2,7 @@ module.exports = class Co_Router
 	{
 		constructor()
 		{
-			this.controller_file = null;
+			this.controller_file = '';
 			this.controller_name = null;			
 		}
 		prepare()
@@ -34,8 +34,10 @@ module.exports = class Co_Router
 			this.event = event;
 			var path = this.path();
 			var data = {}
-			data.file = path.shift();
-			data.function = path.shift();
+			var file = path.shift();
+			var func = path.shift();
+			data.file = file
+			data.function = func
 			data.params = path;
 			return data;
 		}
