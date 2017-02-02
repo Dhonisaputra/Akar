@@ -11,13 +11,14 @@ module.exports = class Router
 	set_routing(event)
 	{
 		var RTR_data = RTR.routing(event)
+		
 		var fnname = (RTR_data.function && RTR_data.function != '')? RTR_data.function : 'index';
 		
 		var classname 	= (!RTR_data.file || RTR_data.file == '')? 'default_controller' : RTR_data.file;
 		classname 		= (Routes[classname])? Routes[classname] : classname;
 
-		this.class 	= classname;
-		this.function = fnname;
+		this.class 		= classname;
+		this.function 	= fnname;
 		this._routing_params = (RTR_data.params)? RTR_data.params : {};
 	}
 
